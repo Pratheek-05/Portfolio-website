@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
+import { Mail, Download } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import Section from './Section';
 
@@ -42,6 +42,14 @@ const Hero = () => {
           >
             <Mail size={20} />
             Email
+          </a>
+          <a
+            href="/resume.pdf"
+            download="Pratheek_Kachinthaya_Resume.pdf"
+            className="flex items-center gap-2 px-6 py-3 glass-card glass-card-hover font-medium text-white border-[var(--color-ios-blue)]/30 hover:border-[var(--color-ios-blue)] hover:bg-[var(--color-ios-blue)]/10"
+          >
+            <Download size={20} />
+            Download Resume
           </a>
         </div>
       </div>
