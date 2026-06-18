@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import Section from './Section';
@@ -48,13 +49,30 @@ const projects = [
   }
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.12, duration: 0.45, ease: "easeOut" }
+  })
+};
+
 const Projects = () => {
   return (
     <Section id="projects" fullHeight={false}>
       <h2 className="text-3xl md:text-4xl font-bold mb-12">Projects</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <div key={index} className="glass-card glass-card-hover p-8 flex flex-col h-full group">
+          <motion.div
+            key={index}
+            custom={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={cardVariants}
+            className="glass-card glass-card-hover p-8 flex flex-col h-full group"
+          >
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-2xl font-bold">{project.title}</h3>
               <a
@@ -81,7 +99,7 @@ const Projects = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </Section>

@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Certifications />
         <Contact />
       </main>
+      <BackToTop />
     </div>
   );
 }
