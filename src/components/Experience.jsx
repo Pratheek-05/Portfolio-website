@@ -26,7 +26,7 @@ const experiences = [
   {
     role: "Research Intern",
     company: "Centre for Digital Transformation, NMIT",
-    date: "Previous",
+    date: "2024",
     bullets: [
       "Built a Deep Reinforcement Learning approach to concept drift detection on streaming data — DQN agent, multiscale hybrid drift detector, Streamlit dashboard with CI/CD via GitHub Actions, Docker, and Render."
     ]
@@ -35,7 +35,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <Section id="experience">
+    <Section id="experience" fullHeight={false}>
       <h2 className="text-3xl md:text-4xl font-bold mb-12">Experience</h2>
       <div className="space-y-8">
         {experiences.map((exp, index) => (
@@ -45,16 +45,15 @@ const Experience = () => {
                 <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
                 <p className="text-lg text-[var(--color-ios-blue)] font-medium mt-1">{exp.company}</p>
               </div>
-              {exp.date !== "Previous" && (
-                <span className="mt-2 md:mt-0 text-gray-400 bg-white/5 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10">
-                  {exp.date}
-                </span>
-              )}
+              <span className="mt-2 md:mt-0 text-gray-400 bg-white/5 px-4 py-1.5 rounded-full text-sm font-medium border border-white/10 shrink-0">
+                {exp.date}
+              </span>
             </div>
-            <ul className="space-y-3 text-gray-300 list-disc list-inside marker:text-gray-500">
+            <ul className="space-y-3">
               {exp.bullets.map((bullet, i) => (
-                <li key={i} className="leading-relaxed">
-                  <span className="-ml-2">{bullet}</span>
+                <li key={i} className="flex items-start gap-3 text-gray-300 leading-relaxed">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-ios-blue)] shrink-0" />
+                  <span>{bullet}</span>
                 </li>
               ))}
             </ul>

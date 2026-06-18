@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Section id="hero" className="pt-32">
       <div className="flex flex-col items-start max-w-3xl">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-white to-gray-400 bg-clip-text text-transparent">
           Pratheek Kachinthaya
         </h1>
         <h2 className="text-2xl md:text-3xl text-[var(--color-ios-blue)] font-medium mb-4">
@@ -22,6 +22,7 @@ const Hero = () => {
             href="https://github.com/Pratheek-05"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit GitHub profile"
             className="flex items-center gap-2 px-6 py-3 bg-[var(--color-ios-blue)] text-white rounded-full font-medium hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20"
           >
             <GithubIcon size={20} />
@@ -31,6 +32,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/pratheek-kachinthaya-014584256"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit LinkedIn profile"
             className="flex items-center gap-2 px-6 py-3 glass-card glass-card-hover font-medium"
           >
             <LinkedinIcon size={20} />
@@ -38,6 +40,7 @@ const Hero = () => {
           </a>
           <a
             href="mailto:pratheekkachinthaya@gmail.com"
+            aria-label="Send email"
             className="flex items-center gap-2 px-6 py-3 glass-card glass-card-hover font-medium"
           >
             <Mail size={20} />
@@ -46,6 +49,7 @@ const Hero = () => {
           <a
             href="/resume.pdf"
             download="Pratheek_Kachinthaya_Resume.pdf"
+            aria-label="Download resume as PDF"
             className="flex items-center gap-2 px-6 py-3 glass-card glass-card-hover font-medium text-white border-[var(--color-ios-blue)]/30 hover:border-[var(--color-ios-blue)] hover:bg-[var(--color-ios-blue)]/10"
           >
             <Download size={20} />

@@ -15,7 +15,7 @@ const activities = [
 
 const Certifications = () => {
   return (
-    <Section id="certifications">
+    <Section id="certifications" fullHeight={false}>
       <h2 className="text-3xl md:text-4xl font-bold mb-12">Certifications & Activities</h2>
       
       <div className="grid md:grid-cols-2 gap-8">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Section = ({ id, children, className = "" }) => {
+const Section = ({ id, children, className = "", fullHeight = true }) => {
   return (
     <motion.section
       id={id}
@@ -9,7 +9,7 @@ const Section = ({ id, children, className = "" }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`min-h-screen flex flex-col justify-center py-24 ${className}`}
+      className={`${fullHeight ? 'min-h-screen' : ''} flex flex-col justify-center py-24 ${className}`}
     >
       <div className="max-w-5xl mx-auto px-6 w-full">
         {children}
